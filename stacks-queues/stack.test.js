@@ -1,5 +1,6 @@
-const Stack = require('../stack');
-const assert = require('chai').assert;
+import { assert } from 'chai';
+
+import Stack from './Stack';
 
 describe('Stack', () => {
   let stack = new Stack();
