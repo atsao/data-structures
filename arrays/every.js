@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Test whether every item in the array pass the test from the provided function
  * @param  {array} elements

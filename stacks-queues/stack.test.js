@@ -25,7 +25,7 @@ describe('Stack', () => {
     assert.equal(stack._size, 0);
   });
 
-  describe('#push()', () => {
+  describe('push', () => {
     it('adds specified item to stack', () => {
       stack.push(1);
       assert.equal(stack._size, 1);
@@ -39,7 +39,7 @@ describe('Stack', () => {
     });
   });
 
-  describe('#pop()', () => {
+  describe('pop', () => {
     it('removes the last item added to the stack', () => {
       assert.deepEqual(stack.pop(), 3);
       assert.equal(stack._size, 2);
