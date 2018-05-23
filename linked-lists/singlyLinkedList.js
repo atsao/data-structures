@@ -1,17 +1,17 @@
 class Node {
-  constructor (value) {
+  constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
 
 class SinglyLinkedList {
-  constructor () {
+  constructor() {
     this.head = null;
     this._length = 0;
   }
 
-  append (value) {
+  append(value) {
     const newNode = new Node(value);
     let currentNode = this.head;
 
@@ -31,7 +31,7 @@ class SinglyLinkedList {
     return newNode;
   }
 
-  remove (position) {
+  remove(position) {
     if (!this._length) {
       throw new ReferenceError('Linked list is empty');
     }
@@ -61,7 +61,7 @@ class SinglyLinkedList {
     }
   }
 
-  getNodeAt (position) {
+  getNodeAt(position) {
     if (!this._length) {
       throw new ReferenceError('Linked list is empty');
     }
@@ -85,4 +85,4 @@ class SinglyLinkedList {
   }
 }
 
-module.exports = SinglyLinkedList;
+export default SinglyLinkedList;

@@ -1,11 +1,12 @@
-const every = require('../every');
-const assert = require('chai').assert;
+import { assert } from 'chai';
+
+import every from './every';
 
 describe('Arrays', () => {
   describe('every', () => {
     it('returns true when all elements pass the truth test', () => {
       const elements = [2, 4, 6, 8];
-      const isEven = (x) => {
+      const isEven = x => {
         return x % 2 === 0;
       };
 
@@ -14,7 +15,7 @@ describe('Arrays', () => {
 
     it('returns false when one element fails the truth test', () => {
       const elements = [2, 4, 7, 8];
-      const isEven = (x) => {
+      const isEven = x => {
         return x % 2 === 0;
       };
 

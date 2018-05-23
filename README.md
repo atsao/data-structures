@@ -4,13 +4,7 @@ Welcome to my data structures repo!
 
 Here I'll post solutions that demonstrate understanding of common data structures found in computer science.
 
-### Organization
+### Navigation
 
-```
-arrays
-graphs
-hash tables
-linked lists
-stacks and queues
-trees
-```
+1.  [Arrays](/arrays)
+1.  [Linked Lists](/linked-lists)

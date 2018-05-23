@@ -1,5 +1,6 @@
-const SinglyLinkedList = require('../singlyLinkedList');
-const assert = require('chai').assert;
+import { assert } from 'chai';
+
+import SinglyLinkedList from './singlyLinkedList';
 
 describe('Linked Lists', () => {
   describe('Singly-Linked List', () => {
@@ -52,14 +53,14 @@ describe('Linked Lists', () => {
       });
 
       it('returns an error when removing a node in an empty list', () => {
-        assert.throws(() => linkedList.remove(1), ReferenceError)
+        assert.throws(() => linkedList.remove(1), ReferenceError);
       });
 
       it('returns an error when removing a node at an invalid position', () => {
         linkedList.append(1);
         linkedList.append(2);
         linkedList.append(3);
-        assert.throws(() => linkedList.remove(4), ReferenceError)
+        assert.throws(() => linkedList.remove(4), ReferenceError);
       });
 
       it('returns and removes the head at position 1', () => {

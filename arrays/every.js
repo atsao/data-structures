@@ -14,6 +14,6 @@ const every = (elements, test) => {
   }
 
   return true;
-}
+};
 
-module.exports = every;
+export default every;
