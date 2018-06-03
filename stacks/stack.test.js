@@ -13,7 +13,7 @@ describe('Stack', () => {
     assert.isFunction(stack.pop);
   });
 
-  it('contains a items instance property', () => {
+  it('contains an items instance property', () => {
     assert.isDefined(stack.items);
   });
 
