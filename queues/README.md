@@ -1,6 +1,6 @@
 ## Queues
 
-A **queue** is also a linear data structure that stores a collection of data in sequential, FIFO (first-in, first-out) order.
+A **queue** is a linear data structure that stores a collection of data in sequential, FIFO (first-in, first-out) order.
 
 A queue has two principal operations:
 

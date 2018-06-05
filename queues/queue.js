@@ -1,5 +1,5 @@
 class Queue {
-  constructor(props) {
+  constructor() {
     this.items = [];
   }
 
