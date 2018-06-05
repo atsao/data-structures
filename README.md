@@ -7,6 +7,6 @@ Here I'll post solutions that demonstrate understanding of common data structure
 ### Navigation
 
 1.  [Arrays](/arrays)
-2.  [Linked Lists](/linked-lists)
-3.  [Stacks](/stacks)
-4.  [Queues](/queues)
+2.  [Stacks](/stacks)
+3.  [Queues](/queues)
+4.  [Linked Lists](/linked-lists)

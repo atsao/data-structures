@@ -12,9 +12,9 @@ A queue has two principal operations:
 |        | Average Case | Worst Case |
 | ------ | :----------: | :--------: |
 | Access |    `O(n)`    |   `O(n)`   |
+| Search |    `O(n)`    |   `O(n)`   |
 | Insert |    `O(1)`    |   `O(1)`   |
 | Delete |    `O(1)`    |   `O(1)`   |
-| Search |    `O(n)`    |   `O(n)`   |
 
 ### Examples
 
