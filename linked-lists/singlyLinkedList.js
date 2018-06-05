@@ -8,80 +8,77 @@ class Node {
 class SinglyLinkedList {
   constructor() {
     this.head = null;
-    this._length = 0;
+    this.length = 0;
   }
 
-  append(value) {
-    const newNode = new Node(value);
-    let currentNode = this.head;
+  append(item) {
+    const node = new Node(item);
+    let current;
 
-    if (!currentNode) {
-      this.head = newNode;
-      this._length++;
-      return newNode;
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      current = this.head; // Start current pointer at head
+
+      // Iterate to find where current.next is null (end of list)
+      while (current.next) {
+        current = current.next;
+      }
+
+      current.next = node;
     }
 
-    while (currentNode.next) {
-      currentNode = currentNode.next;
+    this.length += 1;
+  }
+
+  insert(item, position) {
+    if (position < 0 || position >= this.length) {
+      return false;
     }
 
-    currentNode.next = newNode;
+    const node = new Node(item);
+    let current = this.head; // Start current pointer at head
+    let previous; // Track item prior to one being inserted
+    let index = 0; // Track current position
 
-    this._length++;
-    return newNode;
+    if (position === 0) {
+      node.next = current;
+      this.head = node;
+    } else {
+      while (index < position) {
+        previous = current;
+        current = current.next;
+        index += 1;
+      }
+
+      node.next = current; // Link node to current item
+      previous.next = node; // Set previous next to newly inserted
+    }
   }
 
   remove(position) {
-    if (!this._length) {
-      throw new ReferenceError('Linked list is empty');
+    if (position < 0 || position >= this.length) {
+      return null;
     }
 
-    if (position > this._length || position < 1) {
-      throw new ReferenceError('Position is invalid');
-    }
+    let current = this.head; // Start current pointer at head
+    let previous; // Track item prior to one being deleted
+    let index = 0; // Track current position
 
-    if (position === 1) {
-      const previousHead = this.head;
-      this.head = this.head.next;
-      this._length--;
-
-      return previousHead;
-    }
-
-    let count = 1;
-    let currentNode = this.head;
-    while (currentNode.next) {
-      count++;
-      if (count === position) {
-        let targetNode = currentNode.next.next;
-        currentNode.next = targetNode;
-        this._length--;
-        return targetNode;
+    if (position === 0) {
+      this.head = current.next;
+    } else {
+      while (index < position) {
+        previous = current;
+        current = current.next;
+        index += 1;
       }
-    }
-  }
-
-  getNodeAt(position) {
-    if (!this._length) {
-      throw new ReferenceError('Linked list is empty');
+      previous.next = current.next; // Link previous' next to current next
     }
 
-    if (position > this._length || position < 1) {
-      throw new ReferenceError('Position is invalid');
-    }
+    this.length -= 1;
 
-    if (position === 1) {
-      return this.head;
-    }
-
-    let count = 1;
-    let currentNode = this.head;
-    while (currentNode.next) {
-      count++;
-      if (count === position) {
-        return currentNode.next;
-      }
-    }
+    return current.value;
   }
 }
 
